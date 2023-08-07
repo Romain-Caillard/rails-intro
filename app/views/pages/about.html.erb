@@ -1,1 +1,17 @@
 <h1>Romano is the new king of coding🥩</h1>
+<p>A l'heure ou tu lis çà, il est <%= Time.now %></p>
+
+<h2>Voici ma team du studio:</h2>
+
+<form action="/about" method="get">
+  <input type="text" name="member" placeholder="Rechercher un membre">
+  <input type="submit">
+</form>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ol>
+
+<%= link_to "Voir qui JE suis", contact_path %>
